@@ -100,7 +100,7 @@ function injectLayout() {
         <div class="footer-bottom">
           <span>© 2025 Globalgrads. All rights reserved.</span>
           <span>
-            <a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a>
+            <a href="${root}privacypolicy.html">Privacy Policy</a> · <a href="${root}termsofservice.html">Terms of Service</a>
           </span>
         </div>
       </div>

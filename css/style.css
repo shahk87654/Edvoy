@@ -491,6 +491,97 @@ a {
   animation: gridMove 16s linear infinite;
 }
 
+/* Study Cost Calculator */
+#cost-calculator {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+#cost-calculator .grid-2 {
+  gap: 20px;
+}
+
+#cost-calculator label {
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#cost-calculator select,
+#cost-calculator .input {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+#cost-calculator select:focus,
+#cost-calculator .input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+#cost-calculator select option {
+  background: #1e293b;
+  color: #fff;
+}
+
+#cost-calculator #months {
+  width: 100%;
+  height: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  margin-top: 8px;
+}
+
+#cost-calculator #months::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--primary);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(27, 79, 232, 0.4);
+}
+
+#cost-calculator #months-val {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+#cost-calculator .btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#cost-calculator #cost-output {
+  text-align: center;
+  color: var(--secondary);
+  font-size: 28px;
+  font-weight: 800;
+  margin-top: 24px;
+  padding: 20px;
+  background: rgba(13, 155, 110, 0.15);
+  border-radius: 12px;
+  border: 1px solid rgba(13, 155, 110, 0.3);
+}
+
 .stat-item {
   text-align: center;
   position: relative;
@@ -2105,56 +2196,99 @@ textarea {
 }
 
 .university-card--rich {
-  min-width: 300px;
-  border-radius: 20px;
+  min-width: 280px;
+  border-radius: 16px;
   background: #fff;
-  border: 1px solid var(--border);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.university-card--rich::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
 }
 
 .university-card--rich:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(27, 79, 232, 0.15);
-  border-color: var(--primary);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 32px rgba(27, 79, 232, 0.12);
+  border-color: rgba(27, 79, 232, 0.2);
 }
 
 .university-card--rich .university-rank {
+  position: relative;
+  z-index: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  width: 44px;
+  height: 44px;
+  background: var(--dark);
   color: #fff;
   font-weight: 700;
-  font-size: 14px;
-  border-radius: 12px;
-  margin-bottom: 16px;
+  font-size: 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  border-radius: 10px;
+  margin: 24px 0 12px 24px;
 }
 
 .university-card--rich h3 {
-  font-size: 18px;
+  position: relative;
+  z-index: 1;
+  font-size: 20px;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   color: var(--dark);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 0 24px;
 }
 
 .university-card--rich .university-location {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   gap: 6px;
   color: var(--muted);
   font-size: 13px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  padding: 0 24px;
+}
+
+.university-card--rich .university-location i {
+  color: var(--primary);
+  font-size: 12px;
 }
 
 .university-card--rich .university-desc {
+  position: relative;
+  z-index: 1;
   color: var(--body);
   font-size: 14px;
   line-height: 1.5;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+  padding: 0 24px;
+}
+
+.university-card--rich .badge-light {
+  position: relative;
+  z-index: 1;
+  margin: 0 24px 24px;
+  display: inline-flex;
+  padding: 8px 14px;
+  font-size: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--dark);
+  font-weight: 600;
 }
 
 .scholarship-country-card {
