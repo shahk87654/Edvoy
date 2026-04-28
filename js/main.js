@@ -16,8 +16,13 @@ function injectLayout() {
     header.className = "main-header";
     header.innerHTML = `
       <div class="container navbar">
-        <a class="nav-brand" href="${root}index.html"><i class="fa-solid fa-compass"></i>Global Grads</a>
-        <button class="menu-toggle" aria-label="Open navigation"><i class="fa-solid fa-bars"></i></button>
+        <a class="nav-brand" href="${root}index.html">
+          <i class="fa-solid fa-graduation-cap"></i>
+          Global Grads
+        </a>
+        <button class="menu-toggle" aria-label="Open navigation">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
         <nav class="nav-links">
           ${navItems
             .map(
@@ -33,48 +38,71 @@ function injectLayout() {
   if (footer) {
     footer.className = "footer";
     footer.innerHTML = `
-      <div class="container footer-grid">
-        <div>
-          <div class="nav-brand" style="margin-bottom:12px;"><i class="fa-solid fa-compass"></i>Global Grads</div>
-          <p>Global Grads Consulting empowers students to achieve their academic and career aspirations through expert guidance in university admissions, personalized course selection, and seamless visa applications. Your global journey starts here.</p>
-          <p style="display:flex;gap:12px;font-size:20px;margin-top:12px;">
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-          </p>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-brand">
+              <i class="fa-solid fa-graduation-cap"></i>
+              Global Grads
+            </div>
+            <p class="footer-description">Empowering students worldwide to achieve their academic and career aspirations through expert guidance in admissions and visa processing.</p>
+            <div class="footer-social">
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <div class="footer-links">
+              <a href="${root}about.html">About Us</a>
+              <a href="${root}services.html">Our Services</a>
+              <a href="${root}studydestinations.html">Study Destinations</a>
+              <a href="${root}scholarships.html">Scholarships</a>
+              <a href="${root}contact.html">Contact</a>
+              <a href="${root}applynow.html">Apply Now</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Study Destinations</h4>
+            <div class="footer-links">
+              <a href="${root}allcountries/france.html">France</a>
+              <a href="${root}allcountries/usa.html">United States</a>
+              <a href="${root}allcountries/uk.html">United Kingdom</a>
+              <a href="${root}allcountries/canada.html">Canada</a>
+              <a href="${root}allcountries/australia.html">Australia</a>
+              <a href="${root}allcountries/ireland.html">Ireland</a>
+              <a href="${root}allcountries/wales.html">Wales</a>
+              <a href="${root}allcountries/europe.html">Europe</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>+92-300-4074318</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>info@globalgrads.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>admissions@globalgrads.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Lahore, Pakistan</span>
+            </div>
+          </div>
         </div>
-        <div>
-          <h4>Quick Links</h4>
-          <a href="${root}about.html">About Us</a><br>
-          <a href="${root}services.html">Our Services</a><br>
-          <a href="${root}studydestinations.html">Study Destinations</a><br>
-          <a href="${root}scholarships.html">Scholarships</a><br>
-          <a href="${root}contact.html">Contact</a><br>
-          <a href="${root}applynow.html">Apply Now</a>
+        <div class="footer-bottom">
+          <span>© 2025 Globalgrads. All rights reserved.</span>
+          <span>
+            <a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a>
+          </span>
         </div>
-        <div>
-          <h4>Study Destinations</h4>
-          <a href="${root}allcountries/france.html">France</a><br>
-          <a href="${root}allcountries/usa.html">United States</a><br>
-          <a href="${root}allcountries/uk.html">United Kingdom</a><br>
-          <a href="${root}allcountries/canada.html">Canada</a><br>
-          <a href="${root}allcountries/australia.html">Australia</a><br>
-          <a href="${root}allcountries/ireland.html">Ireland</a><br>
-          <a href="${root}allcountries/wales.html">Wales</a><br>
-          <a href="${root}allcountries/europe.html">Europe</a>
-        </div>
-        <div>
-          <h4>Contact Us</h4>
-          <p>📞 +92-300-4074318</p>
-          <p>✉️ info@globalgrads.com</p>
-          <p>✉️ admissions@globalgrads.com</p>
-          <p>📍 Lahore, Pakistan</p>
-        </div>
-      </div>
-      <div class="container footer-bottom">
-        <span>© 2025 Globalgrads By AspirePath Overseas (PVT) Limited. All rights reserved.</span>
-        <span><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></span>
       </div>
     `;
   }
