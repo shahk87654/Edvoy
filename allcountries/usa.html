@@ -39,7 +39,9 @@
             </div>
           </div>
           <div class="country-hero-aside" data-aos="zoom-in" aria-hidden="true">
-            <div class="flag-card flag-usa country-flag-float"></div>
+            <div class="country-image-card country-flag-float">
+              <img src="https://images.unsplash.com/photo-1481437156560-3205f6a55735?w=600&h=400&fit=crop" alt="United States landscape" />
+            </div>
           </div>
         </div>
       </section>
@@ -84,37 +86,46 @@
             <h2>Top Universities in United States</h2>
             <div class="underline"></div>
           </div>
-          <div class="university-scroll">
-            <article class="university-card university-card--rich" data-aos="fade-up">
-              <h3>Harvard University</h3>
-              <p class="text-muted">Cambridge, MA</p>
-              <p>World's most prestigious university</p>
-              <span class="badge-light">Ranking: #1 QS</span>
-            </article>
-            <article class="university-card university-card--rich" data-aos="fade-up">
-              <h3>Stanford University</h3>
-              <p class="text-muted">Palo Alto, CA</p>
-              <p>Leading tech and entrepreneurship hub</p>
-              <span class="badge-light">Ranking: #3 QS</span>
-            </article>
-            <article class="university-card university-card--rich" data-aos="fade-up">
-              <h3>MIT</h3>
-              <p class="text-muted">Cambridge, MA</p>
-              <p>Global leader in science and engineering</p>
-              <span class="badge-light">Ranking: #2 QS</span>
-            </article>
-            <article class="university-card university-card--rich" data-aos="fade-up">
-              <h3>UC Berkeley</h3>
-              <p class="text-muted">Berkeley, CA</p>
-              <p>Top public university with global impact</p>
-              <span class="badge-light">Ranking: #10 QS</span>
-            </article>
-            <article class="university-card university-card--rich" data-aos="fade-up">
-              <h3>Columbia University</h3>
-              <p class="text-muted">New York, NY</p>
-              <p>Ivy League in New York City</p>
-              <span class="badge-light">Ranking: #12 QS</span>
-            </article>
+          <div class="university-slider-wrapper">
+            <button class="slider-btn prev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="university-scroll">
+              <article class="university-card university-card--rich" data-aos="fade-up">
+                <div class="university-rank">1</div>
+                <h3>Harvard University</h3>
+                <p class="university-location"><i class="fa-solid fa-location-dot"></i> Cambridge, MA</p>
+                <p class="university-desc">World's most prestigious university</p>
+                <span class="badge-light">QS #1</span>
+              </article>
+              <article class="university-card university-card--rich" data-aos="fade-up">
+                <div class="university-rank">3</div>
+                <h3>Stanford University</h3>
+                <p class="university-location"><i class="fa-solid fa-location-dot"></i> Palo Alto, CA</p>
+                <p class="university-desc">Leading tech and entrepreneurship hub</p>
+                <span class="badge-light">QS Top 10</span>
+              </article>
+              <article class="university-card university-card--rich" data-aos="fade-up">
+                <div class="university-rank">2</div>
+                <h3>MIT</h3>
+                <p class="university-location"><i class="fa-solid fa-location-dot"></i> Cambridge, MA</p>
+                <p class="university-desc">Global leader in science and engineering</p>
+                <span class="badge-light">QS Top 10</span>
+              </article>
+              <article class="university-card university-card--rich" data-aos="fade-up">
+                <div class="university-rank">10</div>
+                <h3>UC Berkeley</h3>
+                <p class="university-location"><i class="fa-solid fa-location-dot"></i> Berkeley, CA</p>
+                <p class="university-desc">Top public university with global impact</p>
+                <span class="badge-light">QS Top 20</span>
+              </article>
+              <article class="university-card university-card--rich" data-aos="fade-up">
+                <div class="university-rank">12</div>
+                <h3>Columbia University</h3>
+                <p class="university-location"><i class="fa-solid fa-location-dot"></i> New York, NY</p>
+                <p class="university-desc">Ivy League in New York City</p>
+                <span class="badge-light">QS Top 20</span>
+              </article>
+            </div>
+            <button class="slider-btn next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
           </div>
         </div>
       </section>
@@ -239,8 +250,8 @@
 
       <section class="country-nav">
         <div class="container">
-          <a class="country-nav-link" href="europe.html"><span class="flag-card flag-europe" aria-hidden="true"></span> Europe</a>
-          <a class="country-nav-link" href="uk.html">United Kingdom <span class="flag-card flag-uk" aria-hidden="true"></span></a>
+          <a class="country-nav-link" href="europe.html"><span class="flag-card" aria-hidden="true"><img src="https://images.unsplash.com/photo-1519670976863-7966f8d4d8f4?w=100&h=70&fit=crop" alt="Europe" /></span> Europe</a>
+          <a class="country-nav-link" href="uk.html">United Kingdom <span class="flag-card" aria-hidden="true"><img src="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=100&h=70&fit=crop" alt="United Kingdom" /></span></a>
         </div>
       </section>
 

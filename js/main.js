@@ -253,6 +253,37 @@ function initApplyForm() {
   });
 }
 
+function initUniversitySlider() {
+  const wrappers = document.querySelectorAll(".university-slider-wrapper");
+  wrappers.forEach((wrapper) => {
+    const scroll = wrapper.querySelector(".university-scroll");
+    const prevBtn = wrapper.querySelector(".slider-btn.prev");
+    const nextBtn = wrapper.querySelector(".slider-btn.next");
+    if (!scroll || !prevBtn || !nextBtn) return;
+    
+    const scrollAmount = 320;
+    
+    prevBtn.addEventListener("click", () => {
+      scroll.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    });
+    
+    nextBtn.addEventListener("click", () => {
+      scroll.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+    
+    // Hide/show buttons based on scroll position
+    const updateButtons = () => {
+      prevBtn.style.opacity = scroll.scrollLeft <= 0 ? "0.4" : "1";
+      prevBtn.style.pointerEvents = scroll.scrollLeft <= 0 ? "none" : "auto";
+      nextBtn.style.opacity = scroll.scrollLeft >= scroll.scrollWidth - scroll.clientWidth - 1 ? "0.4" : "1";
+      nextBtn.style.pointerEvents = scroll.scrollLeft >= scroll.scrollWidth - scroll.clientWidth - 1 ? "none" : "auto";
+    };
+    
+    scroll.addEventListener("scroll", updateButtons);
+    updateButtons();
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   injectLayout();
   initNav();
@@ -263,5 +294,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initScholarshipsFilter();
   initCostCalculator();
   initApplyForm();
+  initUniversitySlider();
   if (window.AOS) AOS.init({ duration: 600, once: true, easing: "ease-out-cubic" });
 });
