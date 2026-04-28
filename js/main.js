@@ -1,0 +1,239 @@
+const navItems = [
+  ["about.html", "About"],
+  ["services.html", "Services"],
+  ["studydestinations.html", "Destinations"],
+  ["scholarships.html", "Scholarships"],
+  ["contact.html", "Contact"],
+];
+
+function injectLayout() {
+  const header = document.getElementById("site-header");
+  const footer = document.getElementById("site-footer");
+  const path = window.location.pathname.split("/").pop() || "index.html";
+  const isCountry = window.location.pathname.includes("/allcountries/");
+  const root = isCountry ? "../" : "";
+  if (header) {
+    header.className = "main-header";
+    header.innerHTML = `
+      <div class="container navbar">
+        <a class="nav-brand" href="${root}index.html"><i class="fa-solid fa-compass"></i>Global Grads</a>
+        <button class="menu-toggle" aria-label="Open navigation"><i class="fa-solid fa-bars"></i></button>
+        <nav class="nav-links">
+          ${navItems
+            .map(
+              ([href, label]) =>
+                `<a href="${root}${href}" class="${path === href ? "active" : ""}">${label}</a>`
+            )
+            .join("")}
+          <a href="${root}applynow.html" class="btn btn-primary">Apply Now</a>
+        </nav>
+      </div>
+    `;
+  }
+  if (footer) {
+    footer.className = "footer";
+    footer.innerHTML = `
+      <div class="container footer-grid">
+        <div>
+          <div class="nav-brand" style="margin-bottom:12px;"><i class="fa-solid fa-compass"></i>Global Grads</div>
+          <p>Global Grads Consulting empowers students to achieve their academic and career aspirations through expert guidance in university admissions, personalized course selection, and seamless visa applications. Your global journey starts here.</p>
+          <p style="display:flex;gap:12px;font-size:20px;margin-top:12px;">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          </p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="${root}about.html">About Us</a><br>
+          <a href="${root}services.html">Our Services</a><br>
+          <a href="${root}studydestinations.html">Study Destinations</a><br>
+          <a href="${root}scholarships.html">Scholarships</a><br>
+          <a href="${root}contact.html">Contact</a><br>
+          <a href="${root}applynow.html">Apply Now</a>
+        </div>
+        <div>
+          <h4>Study Destinations</h4>
+          <a href="${root}allcountries/france.html">France</a><br>
+          <a href="${root}allcountries/usa.html">United States</a><br>
+          <a href="${root}allcountries/uk.html">United Kingdom</a><br>
+          <a href="${root}allcountries/canada.html">Canada</a><br>
+          <a href="${root}allcountries/australia.html">Australia</a><br>
+          <a href="${root}allcountries/ireland.html">Ireland</a><br>
+          <a href="${root}allcountries/wales.html">Wales</a><br>
+          <a href="${root}allcountries/europe.html">Europe</a>
+        </div>
+        <div>
+          <h4>Contact Us</h4>
+          <p>📞 +92-300-4074318</p>
+          <p>✉️ info@globalgrads.com</p>
+          <p>✉️ admissions@globalgrads.com</p>
+          <p>📍 Lahore, Pakistan</p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2025 Globalgrads By AspirePath Overseas (PVT) Limited. All rights reserved.</span>
+        <span><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></span>
+      </div>
+    `;
+  }
+}
+
+function initNav() {
+  const header = document.querySelector(".main-header");
+  const nav = document.querySelector(".nav-links");
+  const toggle = document.querySelector(".menu-toggle");
+  if (!header || !nav || !toggle) return;
+  const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 80);
+  onScroll();
+  window.addEventListener("scroll", onScroll);
+  toggle.addEventListener("click", () => nav.classList.toggle("open"));
+}
+
+function initCounters() {
+  const counters = document.querySelectorAll("[data-counter]");
+  if (!counters.length) return;
+  const obs = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = Number(el.dataset.counter || 0);
+        const suffix = el.dataset.suffix || "";
+        const start = performance.now();
+        const dur = 1500;
+        const tick = (now) => {
+          const p = Math.min((now - start) / dur, 1);
+          el.textContent = Math.floor(target * p).toLocaleString() + suffix;
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+        obs.unobserve(el);
+      });
+    },
+    { threshold: 0.35 }
+  );
+  counters.forEach((c) => obs.observe(c));
+}
+
+function initFaq() {
+  document.querySelectorAll(".faq-item .faq-q").forEach((q) => {
+    q.addEventListener("click", () => q.parentElement.classList.toggle("open"));
+  });
+}
+
+function initTimelines() {
+  const items = document.querySelectorAll(".timeline");
+  if (!items.length) return;
+  const obs = new IntersectionObserver(
+    (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("animate")),
+    { threshold: 0.3 }
+  );
+  items.forEach((t) => obs.observe(t));
+}
+
+function initExpenseBars() {
+  const fills = document.querySelectorAll(".expense-fill");
+  if (!fills.length) return;
+  const obs = new IntersectionObserver(
+    (entries) =>
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("in");
+          obs.unobserve(e.target);
+        }
+      }),
+    { threshold: 0.45 }
+  );
+  fills.forEach((f) => obs.observe(f));
+}
+
+function initScholarshipsFilter() {
+  const filters = document.querySelectorAll("[data-filter]");
+  const cards = document.querySelectorAll("[data-region]");
+  if (!filters.length) return;
+  filters.forEach((btn) =>
+    btn.addEventListener("click", () => {
+      filters.forEach((b) => b.classList.remove("btn-primary"));
+      btn.classList.add("btn-primary");
+      const region = btn.dataset.filter;
+      cards.forEach((card) => {
+        const show = region === "all" || card.dataset.region.includes(region);
+        card.style.opacity = show ? "1" : "0";
+        card.style.transform = show ? "scale(1)" : "scale(0.96)";
+        card.style.pointerEvents = show ? "auto" : "none";
+        card.style.position = show ? "relative" : "absolute";
+      });
+    })
+  );
+}
+
+function initCostCalculator() {
+  const form = document.getElementById("cost-calculator");
+  if (!form) return;
+  const country = document.getElementById("country");
+  const tuition = document.getElementById("tuition");
+  const living = document.getElementById("living");
+  const months = document.getElementById("months");
+  const monthsVal = document.getElementById("months-val");
+  const output = document.getElementById("cost-output");
+  const preset = {
+    Canada: [3500000, 180000],
+    USA: [4500000, 200000],
+    UK: [3800000, 160000],
+    Australia: [3200000, 170000],
+    Europe: [500000, 130000],
+    France: [800000, 140000],
+    Ireland: [2800000, 155000],
+    Wales: [2600000, 145000],
+  };
+  country.addEventListener("change", () => {
+    const [t, l] = preset[country.value];
+    tuition.value = t;
+    living.value = l;
+  });
+  months.addEventListener("input", () => (monthsVal.textContent = months.value));
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const total = Number(tuition.value) + Number(living.value) * Number(months.value);
+    let n = 0;
+    const step = total / 30;
+    const timer = setInterval(() => {
+      n += step;
+      if (n >= total) {
+        n = total;
+        clearInterval(timer);
+      }
+      output.textContent = `Estimated Total Cost: PKR ${Math.round(n).toLocaleString()}`;
+    }, 45);
+  });
+}
+
+function initApplyForm() {
+  const form = document.getElementById("apply-form");
+  if (!form) return;
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    form.innerHTML = `
+      <div style="text-align:center;padding:30px 10px;">
+        <div style="font-size:56px;color:var(--secondary);">✅</div>
+        <h3>Application Submitted Successfully</h3>
+        <p>Our admissions advisors will contact you within 24 hours to guide your next steps.</p>
+      </div>
+    `;
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  injectLayout();
+  initNav();
+  initCounters();
+  initFaq();
+  initTimelines();
+  initExpenseBars();
+  initScholarshipsFilter();
+  initCostCalculator();
+  initApplyForm();
+  if (window.AOS) AOS.init({ duration: 600, once: true, easing: "ease-out-cubic" });
+});

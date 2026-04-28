@@ -1,0 +1,57 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="url(#bg)"/>
+  <rect x="86" y="120" width="300" height="286" rx="30" fill="url(#usa)"/>
+  <rect x="418" y="120" width="300" height="286" rx="30" fill="url(#uk)"/>
+  <rect x="750" y="120" width="364" height="286" rx="30" fill="url(#canada)"/>
+  <rect x="86" y="438" width="420" height="332" rx="30" fill="url(#australia)"/>
+  <rect x="538" y="438" width="258" height="332" rx="30" fill="url(#europe)"/>
+  <rect x="828" y="438" width="286" height="332" rx="30" fill="url(#france)"/>
+  <text x="126" y="188" fill="white" font-family="Plus Jakarta Sans, sans-serif" font-size="34" font-weight="800">United States</text>
+  <text x="458" y="188" fill="white" font-family="Plus Jakarta Sans, sans-serif" font-size="34" font-weight="800">United Kingdom</text>
+  <text x="790" y="188" fill="white" font-family="Plus Jakarta Sans, sans-serif" font-size="34" font-weight="800">Canada</text>
+  <text x="126" y="506" fill="white" font-family="Plus Jakarta Sans, sans-serif" font-size="34" font-weight="800">Australia</text>
+  <text x="578" y="506" fill="white" font-family="Plus Jakarta Sans, sans-serif" font-size="34" font-weight="800">Europe</text>
+  <text x="868" y="506" fill="white" font-family="Plus Jakarta Sans, sans-serif" font-size="34" font-weight="800">France</text>
+  <text x="126" y="244" fill="white" fill-opacity="0.88" font-family="Inter, sans-serif" font-size="20">Research, innovation, OPT</text>
+  <text x="458" y="244" fill="white" fill-opacity="0.88" font-family="Inter, sans-serif" font-size="20">Prestige, 1-year master's</text>
+  <text x="790" y="244" fill="white" fill-opacity="0.88" font-family="Inter, sans-serif" font-size="20">Safety, PGWP, PR routes</text>
+  <text x="126" y="562" fill="white" fill-opacity="0.88" font-family="Inter, sans-serif" font-size="20">Lifestyle, rankings, work rights</text>
+  <text x="578" y="562" fill="white" fill-opacity="0.88" font-family="Inter, sans-serif" font-size="20">Mobility, affordability</text>
+  <text x="868" y="562" fill="white" fill-opacity="0.88" font-family="Inter, sans-serif" font-size="20">Culture, prestige, value</text>
+  <circle cx="325" cy="330" r="38" fill="white" fill-opacity="0.14"/>
+  <circle cx="657" cy="330" r="38" fill="white" fill-opacity="0.14"/>
+  <circle cx="1048" cy="330" r="38" fill="white" fill-opacity="0.14"/>
+  <circle cx="445" cy="696" r="48" fill="white" fill-opacity="0.14"/>
+  <circle cx="734" cy="696" r="48" fill="white" fill-opacity="0.14"/>
+  <circle cx="1052" cy="696" r="48" fill="white" fill-opacity="0.14"/>
+  <defs>
+    <linearGradient id="bg" x1="58" y1="64" x2="1138" y2="830" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6F9FF"/>
+      <stop offset="1" stop-color="#EDF8FF"/>
+    </linearGradient>
+    <linearGradient id="usa" x1="86" y1="120" x2="386" y2="406" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B3A6B"/>
+      <stop offset="1" stop-color="#B22234"/>
+    </linearGradient>
+    <linearGradient id="uk" x1="418" y1="120" x2="718" y2="406" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#012169"/>
+      <stop offset="1" stop-color="#C8102E"/>
+    </linearGradient>
+    <linearGradient id="canada" x1="750" y1="120" x2="1114" y2="406" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF0000"/>
+      <stop offset="1" stop-color="#8B0000"/>
+    </linearGradient>
+    <linearGradient id="australia" x1="86" y1="438" x2="506" y2="770" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00843D"/>
+      <stop offset="1" stop-color="#FFCD00"/>
+    </linearGradient>
+    <linearGradient id="europe" x1="538" y1="438" x2="796" y2="770" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#003399"/>
+      <stop offset="1" stop-color="#FFCC00"/>
+    </linearGradient>
+    <linearGradient id="france" x1="828" y1="438" x2="1114" y2="770" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#002395"/>
+      <stop offset="1" stop-color="#ED2939"/>
+    </linearGradient>
+  </defs>
+</svg>
