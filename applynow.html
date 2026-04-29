@@ -45,18 +45,23 @@
         </ul>
       </div>
 
-      <form id="apply-form" class="apply-form-wrap" data-aos="fade-left">
+      <form id="apply-form" class="apply-form-wrap" data-aos="fade-left" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+        <input type="hidden" name="subject" value="New Application - Global Grads">
+        <input type="hidden" name="from_name" value="Global Grads Website">
+        <input type="checkbox" name="botcheck" style="display:none;">
+        
         <span class="form-kicker">Application Form</span>
         <h2>Tell Us About Your Goals</h2>
         <p>Complete the short form below and our team will contact you with the most suitable next steps.</p>
-        <div class="grid-2"><input class="input" required placeholder="Full Name" /><input class="input" required placeholder="Phone Number" /></div>
-        <p><input class="input" required placeholder="Email Address" /></p>
+        <div class="grid-2"><input class="input" required placeholder="Full Name" name="full_name" /><input class="input" required placeholder="Phone Number" name="phone" /></div>
+        <p><input class="input" required placeholder="Email Address" name="email" type="email" /></p>
         <div class="grid-2">
-          <p><select required><option value="">Preferred Country</option><option>USA</option><option>UK</option><option>Canada</option><option>Australia</option><option>Ireland</option><option>Wales</option><option>Europe</option><option>France</option></select></p>
-          <p><select required><option value="">Current Study Level</option><option>Intermediate / A Levels</option><option>Bachelor's</option><option>Master's</option><option>Postgraduate Research</option></select></p>
+          <p><select required name="preferred_country"><option value="">Preferred Country</option><option>USA</option><option>UK</option><option>Canada</option><option>Australia</option><option>Ireland</option><option>Wales</option><option>Europe</option><option>France</option></select></p>
+          <p><select required name="current_study_level"><option value="">Current Study Level</option><option>Intermediate / A Levels</option><option>Bachelor's</option><option>Master's</option><option>Postgraduate Research</option></select></p>
         </div>
-        <div class="grid-2"><input class="input" placeholder="Current Qualification" /><input class="input" placeholder="Preferred Intake (Month/Year)" /></div>
-        <p><textarea class="input" rows="5" placeholder="Career goals, preferred programs, budget range, and anything important you want us to know"></textarea></p>
+        <div class="grid-2"><input class="input" placeholder="Current Qualification" name="current_qualification" /><input class="input" placeholder="Preferred Intake (Month/Year)" name="preferred_intake" /></div>
+        <p><textarea class="input" rows="5" placeholder="Career goals, preferred programs, budget range, and anything important you want us to know" name="message"></textarea></p>
         <button class="btn btn-primary" type="submit">Submit Application</button>
       </form>
     </div>

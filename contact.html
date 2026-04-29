@@ -58,18 +58,23 @@
       </div>
 
       <div>
-        <form class="contact-form-shell" data-aos="fade-left">
+        <form class="contact-form-shell" data-aos="fade-left" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+          <input type="hidden" name="subject" value="New Inquiry - Global Grads">
+          <input type="hidden" name="from_name" value="Global Grads Website">
+          <input type="checkbox" name="botcheck" style="display:none;">
+          
           <span class="form-kicker">Send an Inquiry</span>
           <h2>Tell Us About Your Study Abroad Goals</h2>
           <p>Share a few details and we will help you identify the right path, destination, and next action plan.</p>
-          <div class="grid-2"><input class="input" placeholder="Full Name" /><input class="input" placeholder="Phone Number" /></div>
-          <p><input class="input" placeholder="Email Address" /></p>
+          <div class="grid-2"><input class="input" placeholder="Full Name" name="full_name" /><input class="input" placeholder="Phone Number" name="phone" /></div>
+          <p><input class="input" placeholder="Email Address" name="email" type="email" /></p>
           <div class="grid-2">
-            <p><select><option>Interested Destination</option><option>USA</option><option>UK</option><option>Canada</option><option>Australia</option><option>Europe</option><option>Ireland</option><option>France</option></select></p>
-            <p><select><option>Current Study Level</option><option>Intermediate / A Levels</option><option>Bachelor's</option><option>Master's</option><option>Postgraduate Research</option></select></p>
+            <p><select name="interested_destination"><option>Interested Destination</option><option>USA</option><option>UK</option><option>Canada</option><option>Australia</option><option>Europe</option><option>Ireland</option><option>France</option></select></p>
+            <p><select name="current_study_level"><option>Current Study Level</option><option>Intermediate / A Levels</option><option>Bachelor's</option><option>Master's</option><option>Postgraduate Research</option></select></p>
           </div>
-          <p><textarea rows="6" placeholder="Tell us about your goals, preferred programs, timeline, and any questions you have"></textarea></p>
-          <button class="btn btn-primary" type="button">Submit Inquiry</button>
+          <p><textarea rows="6" placeholder="Tell us about your goals, preferred programs, timeline, and any questions you have" name="message"></textarea></p>
+          <button class="btn btn-primary" type="submit">Submit Inquiry</button>
         </form>
       </div>
     </div>
