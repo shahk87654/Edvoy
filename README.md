@@ -1,10 +1,10 @@
-# Global Grads Consulting
+# Enrollio
 
 A modern, responsive education consulting website built with HTML, CSS, and JavaScript.
 
 ## 🌐 Overview
 
-Global Grads Consulting helps students from Pakistan secure admissions, scholarships, and visas for top universities worldwide. From university selection to visa applications, we're here to make your dreams a reality.
+Enrollio helps students from Pakistan secure admissions, scholarships, and visas for top universities worldwide. From university selection to visa applications, we're here to make your dreams a reality.
 
 ## ✨ Features
 
@@ -26,7 +26,7 @@ Global Grads Consulting helps students from Pakistan secure admissions, scholars
 ## 📁 Project Structure
 
 ```
-GG Revamp/
+Enrollio/
 ├── index.html              # Home page
 ├── about.html              # About us
 ├── applynow.html           # Application form
@@ -72,7 +72,7 @@ GG Revamp/
 
 ## 📞 Contact
 
-- **Email**: info@globalgrads.com
+- **Email**: info@enrollio.com
 - **Phone**: +92-XXX-XXXXXXX
 - **Location**: Pakistan
 

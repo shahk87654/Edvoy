@@ -18,7 +18,7 @@ function injectLayout() {
       <div class="container navbar">
         <a class="nav-brand" href="${root}index.html">
           <i class="fa-solid fa-graduation-cap"></i>
-          Global Grads
+          Enrollio
         </a>
         <button class="menu-toggle" aria-label="Open navigation">
           <i class="fa-solid fa-bars-staggered"></i>
@@ -43,7 +43,7 @@ function injectLayout() {
           <div class="footer-col">
             <div class="footer-brand">
               <i class="fa-solid fa-graduation-cap"></i>
-              Global Grads
+              Enrollio
             </div>
             <p class="footer-description">Empowering students worldwide to achieve their academic and career aspirations through expert guidance in admissions and visa processing.</p>
             <div class="footer-social">
@@ -85,11 +85,11 @@ function injectLayout() {
             </div>
             <div class="footer-contact-item">
               <i class="fa-solid fa-envelope"></i>
-              <span>info@globalgrads.com</span>
+              <span>info@Enrollio.com</span>
             </div>
             <div class="footer-contact-item">
               <i class="fa-solid fa-paper-plane"></i>
-              <span>admissions@globalgrads.com</span>
+              <span>admissions@Enrollio.com</span>
             </div>
             <div class="footer-contact-item">
               <i class="fa-solid fa-location-dot"></i>
@@ -98,7 +98,7 @@ function injectLayout() {
           </div>
         </div>
         <div class="footer-bottom">
-          <span>© 2025 Globalgrads. All rights reserved.</span>
+          <span>© 2025 Enrollio. All rights reserved.</span>
           <span>
             <a href="${root}privacypolicy.html">Privacy Policy</a> · <a href="${root}termsofservice.html">Terms of Service</a>
           </span>
