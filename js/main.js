@@ -200,6 +200,7 @@ function initScholarshipsFilter() {
 function initCostCalculator() {
   const form = document.getElementById("cost-calculator");
   if (!form) return;
+  console.log("Cost calculator initialized");
   const country = document.getElementById("country");
   const tuition = document.getElementById("tuition");
   const living = document.getElementById("living");
@@ -224,7 +225,9 @@ function initCostCalculator() {
   months.addEventListener("input", () => (monthsVal.textContent = months.value));
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+    console.log("Form submitted, calculating...");
     const total = Number(tuition.value) + Number(living.value) * Number(months.value);
+    console.log("Total:", total);
     let n = 0;
     const step = total / 30;
     const timer = setInterval(() => {
