@@ -147,17 +147,128 @@
 
       <section class="section stats-bar">
         <div class="container">
-          <div class="section-title"><h2 style="color:#fff;">Study Cost Calculator</h2></div>
-          <form id="cost-calculator" class="card" style="max-width:760px;margin:auto;">
-            <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;">
-              <div><label for="country">Country</label><select id="country"><option>Canada</option><option>USA</option><option>UK</option><option>Australia</option><option>Europe</option><option>France</option><option>Ireland</option><option>Wales</option></select></div>
-              <div><label for="tuition">Annual Tuition (PKR)</label><input class="input" id="tuition" value="3500000" /></div>
-              <div><label for="living">Monthly Living (PKR)</label><input class="input" id="living" value="180000" /></div>
-              <div><label for="months">Months: <span id="months-val">12</span></label><input id="months" type="range" min="6" max="48" value="12" /></div>
+          <div class="section-title" data-aos="fade-up">
+            <h2 style="color:#fff;">Our Global University Network</h2>
+            <div class="underline" style="background:linear-gradient(90deg, #fff, var(--secondary));"></div>
+          </div>
+          <div class="university-slider-wrapper">
+            <button class="slider-btn prev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="university-scroll">
+              <article class="university-card university-card--sleek" data-aos="fade-up">
+                <div class="uni-logo" style="background:linear-gradient(135deg, #A51C30, #ed1b2f);"><i class="fa-solid fa-building-columns"></i></div>
+                <h3>Harvard University</h3>
+                <p class="university-location"><i class="fa-solid fa-location-dot"></i> Cambridge, USA</p>
+                <p class="university-desc">World-leading research and Ivy League prestige.</p>
+                <span class="badge-sleek">Ivy League</span>
+              </article>
+              <article class="university-card university-card--sleek" data-aos="fade-up" data-aos-delay="50">
+                <div class="uni-logo" style="background:linear-gradient(135deg, #002147, #004d99);"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3>University of Oxford</h3>
+                <p class="university-location"><i class="fa-solid fa-location-dot"></i> Oxford, UK</p>
+                <p class="university-desc">Oldest university in the English-speaking world.</p>
+                <span class="badge-sleek">Global Elite</span>
+              </article>
+              <article class="university-card university-card--sleek" data-aos="fade-up" data-aos-delay="100">
+                <div class="uni-logo" style="background:linear-gradient(135deg, #002A5C, #0056b3);"><i class="fa-solid fa-book-open"></i></div>
+                <h3>University of Toronto</h3>
+                <p class="university-location"><i class="fa-solid fa-location-dot"></i> Toronto, Canada</p>
+                <p class="university-desc">Canada's top-ranked research institution.</p>
+                <span class="badge-sleek">Top in Canada</span>
+              </article>
+              <article class="university-card university-card--sleek" data-aos="fade-up" data-aos-delay="150">
+                <div class="uni-logo" style="background:linear-gradient(135deg, #094183, #1e90ff);"><i class="fa-solid fa-microscope"></i></div>
+                <h3>University of Melbourne</h3>
+                <p class="university-location"><i class="fa-solid fa-location-dot"></i> Melbourne, Australia</p>
+                <p class="university-desc">Australia's #1 university for research impact.</p>
+                <span class="badge-sleek">Group of Eight</span>
+              </article>
+              <article class="university-card university-card--sleek" data-aos="fade-up" data-aos-delay="200">
+                <div class="uni-logo" style="background:linear-gradient(135deg, #30415d, #4a90e2);"><i class="fa-solid fa-laptop-code"></i></div>
+                <h3>Stanford University</h3>
+                <p class="university-location"><i class="fa-solid fa-location-dot"></i> Stanford, USA</p>
+                <p class="university-desc">Global leader in innovation and technology.</p>
+                <span class="badge-sleek">Silicon Valley</span>
+              </article>
+              <article class="university-card university-card--sleek" data-aos="fade-up" data-aos-delay="250">
+                <div class="uni-logo" style="background:linear-gradient(135deg, #A31515, #ff4d4d);"><i class="fa-solid fa-landmark"></i></div>
+                <h3>University of Cambridge</h3>
+                <p class="university-location"><i class="fa-solid fa-location-dot"></i> Cambridge, UK</p>
+                <p class="university-desc">A world-renowned historic academic powerhouse.</p>
+                <span class="badge-sleek">Historic Elite</span>
+              </article>
+              <article class="university-card university-card--sleek" data-aos="fade-up" data-aos-delay="300">
+                <div class="uni-logo" style="background:linear-gradient(135deg, #ED1B2F, #ff6666);"><i class="fa-solid fa-earth-americas"></i></div>
+                <h3>McGill University</h3>
+                <p class="university-location"><i class="fa-solid fa-location-dot"></i> Montreal, Canada</p>
+                <p class="university-desc">Canada's most international research university.</p>
+                <span class="badge-sleek">Global Research</span>
+              </article>
+              <article class="university-card university-card--sleek" data-aos="fade-up" data-aos-delay="350">
+                <div class="uni-logo" style="background:linear-gradient(135deg, #E64626, #ffa500);"><i class="fa-solid fa-atom"></i></div>
+                <h3>University of Sydney</h3>
+                <p class="university-location"><i class="fa-solid fa-location-dot"></i> Sydney, Australia</p>
+                <p class="university-desc">Australia's first university with a global outlook.</p>
+                <span class="badge-sleek">Top 20 Global</span>
+              </article>
+              <article class="university-card university-card--sleek" data-aos="fade-up" data-aos-delay="400">
+                <div class="uni-logo" style="background:linear-gradient(135deg, #00529B, #0073e6);"><i class="fa-solid fa-gears"></i></div>
+                <h3>TU Munich</h3>
+                <p class="university-location"><i class="fa-solid fa-location-dot"></i> Munich, Germany</p>
+                <p class="university-desc">Excellence in engineering and technology.</p>
+                <span class="badge-sleek">TU9 Member</span>
+              </article>
+              <article class="university-card university-card--sleek" data-aos="fade-up" data-aos-delay="450">
+                <div class="uni-logo" style="background:linear-gradient(135deg, #1A3668, #3b5998);"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3>Trinity College Dublin</h3>
+                <p class="university-location"><i class="fa-solid fa-location-dot"></i> Dublin, Ireland</p>
+                <p class="university-desc">Ireland's leading university for over 400 years.</p>
+                <span class="badge-sleek">Top in Ireland</span>
+              </article>
+              <article class="university-card university-card--sleek" data-aos="fade-up" data-aos-delay="500">
+                <div class="uni-logo" style="background:linear-gradient(135deg, #1f2937, #4b5563);"><i class="fa-solid fa-flask"></i></div>
+                <h3>ETH Zurich</h3>
+                <p class="university-location"><i class="fa-solid fa-location-dot"></i> Zurich, Switzerland</p>
+                <p class="university-desc">A leading global center for science and tech.</p>
+                <span class="badge-sleek">World Top 10</span>
+              </article>
+              <article class="university-card university-card--sleek" data-aos="fade-up" data-aos-delay="550">
+                <div class="uni-logo" style="background:linear-gradient(135deg, #002395, #3366ff);"><i class="fa-solid fa-palette"></i></div>
+                <h3>Sorbonne University</h3>
+                <p class="university-location"><i class="fa-solid fa-location-dot"></i> Paris, France</p>
+                <p class="university-desc">Prestigious institution in the heart of Paris.</p>
+                <span class="badge-sleek">Elite French Uni</span>
+              </article>
+              <article class="university-card university-card--sleek" data-aos="fade-up" data-aos-delay="600">
+                <div class="uni-logo" style="background:linear-gradient(135deg, #002145, #00529B);"><i class="fa-solid fa-tree"></i></div>
+                <h3>University of British Columbia</h3>
+                <p class="university-location"><i class="fa-solid fa-location-dot"></i> Vancouver, Canada</p>
+                <p class="university-desc">Global center for teaching, learning and research.</p>
+                <span class="badge-sleek">Ocean-side Campus</span>
+              </article>
+              <article class="university-card university-card--sleek" data-aos="fade-up" data-aos-delay="650">
+                <div class="uni-logo" style="background:linear-gradient(135deg, #003D7D, #005bb8);"><i class="fa-solid fa-satellite-dish"></i></div>
+                <h3>Imperial College London</h3>
+                <p class="university-location"><i class="fa-solid fa-location-dot"></i> London, UK</p>
+                <p class="university-desc">Focusing exclusively on science, med, and eng.</p>
+                <span class="badge-sleek">Global Innovator</span>
+              </article>
+              <article class="university-card university-card--sleek" data-aos="fade-up" data-aos-delay="700">
+                <div class="uni-logo" style="background:linear-gradient(135deg, #00356B, #005bb8);"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h3>Yale University</h3>
+                <p class="university-location"><i class="fa-solid fa-location-dot"></i> New Haven, USA</p>
+                <p class="university-desc">Ivy League excellence and historic legacy.</p>
+                <span class="badge-sleek">Top 5 Globally</span>
+              </article>
+              <article class="university-card university-card--sleek" data-aos="fade-up" data-aos-delay="750">
+                <div class="uni-logo" style="background:linear-gradient(135deg, #006DAE, #00aaff);"><i class="fa-solid fa-globe"></i></div>
+                <h3>Monash University</h3>
+                <p class="university-location"><i class="fa-solid fa-location-dot"></i> Melbourne, Australia</p>
+                <p class="university-desc">Australia's largest and most international university.</p>
+                <span class="badge-sleek">Modern Excellence</span>
+              </article>
             </div>
-            <p style="margin-top:16px;"><button class="btn btn-primary" type="submit">Calculate Total Cost</button></p>
-            <h3 id="cost-output">Estimated Total Cost: PKR 0</h3>
-          </form>
+            <button class="slider-btn next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
         </div>
       </section>
 

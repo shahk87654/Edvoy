@@ -2195,100 +2195,96 @@ textarea {
   margin-bottom: 8px;
 }
 
-.university-card--rich {
-  min-width: 280px;
-  border-radius: 16px;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-  overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+.university-card--sleek {
+  min-width: 300px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 32px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
 }
 
-.university-card--rich::before {
+.university-card--sleek:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.university-card--sleek::after {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.05), transparent 70%);
+  pointer-events: none;
 }
 
-.university-card--rich:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 16px 32px rgba(27, 79, 232, 0.12);
-  border-color: rgba(27, 79, 232, 0.2);
-}
-
-.university-card--rich .university-rank {
-  position: relative;
-  z-index: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  background: var(--dark);
-  color: #fff;
-  font-weight: 700;
-  font-size: 16px;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  border-radius: 10px;
-  margin: 24px 0 12px 24px;
-}
-
-.university-card--rich h3 {
-  position: relative;
-  z-index: 1;
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 4px;
-  color: var(--dark);
-  font-family: "Plus Jakarta Sans", sans-serif;
-  padding: 0 24px;
-}
-
-.university-card--rich .university-location {
-  position: relative;
-  z-index: 1;
+.uni-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
-  gap: 6px;
-  color: var(--muted);
-  font-size: 13px;
-  margin-bottom: 8px;
-  font-weight: 500;
-  padding: 0 24px;
+  justify-content: center;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 4px;
 }
 
-.university-card--rich .university-location i {
-  color: var(--primary);
-  font-size: 12px;
+.university-card--sleek h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1.2;
 }
 
-.university-card--rich .university-desc {
-  position: relative;
-  z-index: 1;
-  color: var(--body);
+.university-card--sleek .university-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
-  line-height: 1.5;
-  margin-bottom: 16px;
-  padding: 0 24px;
+  font-weight: 500;
 }
 
-.university-card--rich .badge-light {
-  position: relative;
-  z-index: 1;
-  margin: 0 24px 24px;
-  display: inline-flex;
-  padding: 8px 14px;
+.university-card--sleek .university-location i {
+  color: var(--secondary);
+}
+
+.university-card--sleek .university-desc {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.university-card--sleek .badge-sleek {
+  align-self: flex-start;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
   font-size: 12px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  color: var(--dark);
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .scholarship-country-card {
